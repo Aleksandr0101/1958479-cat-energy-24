@@ -8,8 +8,13 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrapper container">
-        <a class="page-header__logo"</a>
-          <nav class="main-nav main-nav--no-js">
+        <a class="page-header__logo" href="#"</a>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+            <img class="page-header__logo-img" src="img/vector/logo-mobile.svg" alt="Логотип Cat-Energy" width="33" height="38">
+          </picture>
+          <nav class="main-nav">
             <button class="main-nav__toggle toggle" type="button">
               <span class="visually-hidden">Показать/Скрыть Меню</span>
               <span class="toggle__btn"></span>
@@ -17,39 +22,46 @@
             </div>
             <div>
             <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
+              <li class="site-list__item site-list__item--active">
+                <a>
+                  Главная
+                </a>
               </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--active" href="#">Каталог продукции</a>
+              <li class="site-list__item">
+                <a href="form.html">
+                Каталог продукции
+              </a>
               </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
+              <li class="site-list__item">
+                <a href="#">
+                  Подбор программы
+                </a>
               </li>
             </ul>
           </nav>
-        </div>
+        </div class="main-nav__list user-list">
+      </div>
+    </div>
       </header>
       <section class="page-header__promo promo">
         <div class="content-wrapper">
           <div class="promo__content">
-            <h1 class="promo__title">Функциональное<br> питание для котов</h1>
+            <h1 class="promo__title">Функциональное питание для котов</h1>
             <p class="promo__text">Занялся собой? Займись котом!</p>
             <a class="promo__link button button--green" href="form.html">Подобрать программу</a>
           </div>
         </div>
       </section>
-    </header>
-    <main>
-      <h1 class="visually-hidden">Cat Energy</h1>
+
+      <main>
 
       <section class="program">
         <h2 class="visually-hidden">Программы тренировок</h2>
         <div class="program__wrapper container">
 
-          <article class="program__item program__item--slim">
-            <h3 class="program__title">
-              <span class="program__icon program__icon--slim"></span>
+          <article class="program-types__type program-types__type--slim">
+            <h3 class="program-types--slim">
+              <input class="slider__before visually-hidden">
               Похудение
             </h3>
 
@@ -60,11 +72,10 @@
             <a class="program__link" href="catalog.html">Каталог Slim</a>
           </article>
 
-          <article class="program__item program__item--pro">
-            <h3 class="program__title">
-              <span class="program__icon program__icon--pro"></span>
-              Набор массы
-            </h3>
+          <article>
+            <div class="program-types__type program-types__type--pro">
+              <div class="program-types__content program-types__content--pro">
+                <h3 class="program-types__title">Набор массы</h3>
 
             <p class="program__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -117,12 +128,12 @@
               <div class="example__achievements">
 
                 <div class="achievement">
-                  <span class="achievement__title">Снижение<br> веса</span>
+                  <span class="achievement__title">Снижение веса</span>
                   <span class="achievement__value">5 кг</span>
                 </div>
 
                 <div class="achievement">
-                  <span class="achievement__title">Затрачено<br> времени</span>
+                  <span class="achievement__title">Затрачено времени</span>
                   <span class="achievement__value">60 дней</span>
                 </div>
 
@@ -135,31 +146,26 @@
             </div>
           </div>
 
-          <div class="slider">
-            <input type="radio" id="before" class="slider__before visually-hidden" name="image-toggle">
-            <input type="radio" id="after" class="slider__after visually-hidden" name="image-toggle">
-            <div class="slider__actions">
-              <label for="before" class="slider__btn slider__btn--before">Было</label>
-              <div class="slider__scale">
-                <div class="slider__grip"></div>
+          <div class="to slice">
+            <input type="radio" id="before" class="to slice__before visually-hidden" name="image-toggle">
+            <input type="radio" id="after" class="to slice__after visually-hidden" name="image-toggle">
+            <div class="to slice__actions">
+              <label for="before" class="to slice__btn to slice__btn--before">Было</label>
+              <div class="sto slice__scale">
+                <div class="to slice__grip"></div>
               </div>
-              <label for="after" class="slider__btn slider__btn--after">Стало</label>
+              <label for="after" class="to slice__btn to slice__btn--after">Стало</label>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-
-      <section class="page-footer__contacts contacts">
-        <div class="contacts__text">
-          <div class="contacts__text-wrapper contacts__text-wrapper--white">
-            <p class="contacts__greeting contacts__part">
-              Приглашаем к сотрудничеству дилеров!
-            </p>
-            <p class="contacts__address contacts__part">
-              ул. Большая Конюшенная, д. 19/8
-              <span class="contacts__city">Санкт-Петербург</span>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__contacts contacts">
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__text">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург <br>
             </p>
           </div>
         </div>
