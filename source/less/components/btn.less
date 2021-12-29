@@ -1,0 +1,46 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: none;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $second-font-color;
+  background-color: $bg-color;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    span {
+      opacity: 0.3;
+    }
+  }
+
+  &--second-style {
+    color: $main-font-color;
+
+    background-color: $second-bg-color;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .btn {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
