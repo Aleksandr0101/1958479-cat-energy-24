@@ -7,7 +7,7 @@ import browser from 'browser-sync';
 
 // Styles
 
-export const styles = () => {
+export function styles() {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
